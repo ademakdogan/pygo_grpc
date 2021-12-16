@@ -1,0 +1,17 @@
+syntax = "proto3";
+option go_package = "github.com/ademakdogan/pygo_grpc/pb";
+
+service Math{
+    rpc OrderMath(MathRequest) returns (MathResponse);
+}
+
+message MathRequest {
+    int32 x = 1;
+    int32 y = 2;
+    string z = 3;
+}
+
+message MathResponse{
+    int32 result = 1;
+    string message = 2;
+}
